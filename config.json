@@ -1,0 +1,14 @@
+{
+    "development": {
+        "db_host": "http://localhost:5984/bodega",
+        "db_user": "sjimenez",
+        "db_pass": "cornell1",
+        "adminEmail": "sjimenez@2bi.es"
+    },
+    "production": {
+        "db_host": "https://sjimenez.cloudant.com/bodegas",
+        "db_user": "sjimenez",
+        "db_pass": "TPLISv2T7Klg",
+        "adminEmail": "sjimenez@2bi.es"
+    }
+}
