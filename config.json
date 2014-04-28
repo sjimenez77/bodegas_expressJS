@@ -6,9 +6,9 @@
         "adminEmail": "sjimenez@2bi.es"
     },
     "production": {
-        "db_host": "https://sjimenez.cloudant.com/bodegas",
-        "db_user": "sjimenez",
-        "db_pass": "TPLISv2T7Klg",
-        "adminEmail": "sjimenez@2bi.es"
+        "db_host": "",
+        "db_user": "",
+        "db_pass": "",
+        "adminEmail": ""
     }
 }
