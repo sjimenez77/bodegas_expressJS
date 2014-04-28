@@ -1,6 +1,12 @@
 var schema = require('../app').schema;
 
 var User = schema.define('User', {
+	couchType: {
+        type: String,
+        limit: 25,
+        default: 'user',
+        index: true
+    },
     email: {
         type: String,
         limit: 150,
@@ -57,27 +63,27 @@ User.prototype.getActivated = function () {
 
 // *** Setters ************************************************************
 User.prototype.setEmail = function (email) {
-    this.email = email;
+    this.updateAttribute('email', email);
     return this;
 };
 
 User.prototype.setName = function (name) {
-    this.name = name;
+    this.updateAttribute('name', name);
     return this;
 };
 
 User.prototype.setSurname = function (surname) {
-    this.surname = surname;
+    this.updateAttribute('surname', surname);
     return this;
 };
 
 User.prototype.setRegistrationDate = function (date) {
-    this.registrationDate = date;
+    this.updateAttribute('date', date);
     return this;
 };
 
 User.prototype.setActivated = function (activated) {
-    this.activated = activated;
+    this.updateAttribute('activated', activated);
     return this;
 };
 

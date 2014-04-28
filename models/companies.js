@@ -1,6 +1,12 @@
 var schema = require('../app').schema;
 
 var Company = schema.define('Company', {
+	couchType: {
+        type: String,
+        limit: 25,
+        default: 'company',
+        index: true
+    },
 	name: {
         type: String,
         limit: 150,
@@ -94,54 +100,53 @@ Company.prototype.getEmail = function () {
 
 // *** Setters ************************************************************
 Company.prototype.setName = function (name) {
-    this.name = name;
+    this.updateAttribute('name', name);
     return this;
 };
 
 Company.prototype.setType = function (type) {
-    this.type = type;
+    this.updateAttribute('type', type);
     return this;
 };
 
 Company.prototype.setNIF = function (nif) {
-    this.nif = nif;
+    this.updateAttribute('nif', nif);
     return this;
 };
 
 Company.prototype.setAddress = function (address) {
-    this.address = address;
+    this.updateAttribute('address', address);
     return this;
 };
 
 Company.prototype.setPostalCode = function (pCode) {
-    this.postalCode = pCode;
+    this.updateAttribute('postalCode', pCode);
     return this;
 };
 
 Company.prototype.setRegion = function (region) {
-    this.region = region;
+    this.updateAttribute('region', region);
     return this;
 };
 
 Company.prototype.setProvince = function (province) {
-    this.province = province;
+    this.updateAttribute('province', province);
     return this;
 };
 
 Company.prototype.setCity = function (city) {
-    this.city = city;
+    this.updateAttribute('city', city);
     return this;
 };
 
 Company.prototype.setTlf = function (tlf) {
-    this.tlf = tlf;
+    this.updateAttribute('tlf', tlf);
     return this;
 };
 
 Company.prototype.setEmail = function (email) {
-    this.email = email;
+    this.updateAttribute('email', email);
     return this;
 };
-
 
 module.exports = Company;
