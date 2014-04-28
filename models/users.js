@@ -34,7 +34,7 @@ var User = schema.define('User', {
     table: 'users'
 });
 
-// Getters
+// *** Getters ************************************************************
 User.prototype.getEmail = function () {
     return this.email;
 };
@@ -55,25 +55,30 @@ User.prototype.getActivated = function () {
     return this.activated;
 };
 
-// Setters
+// *** Setters ************************************************************
 User.prototype.setEmail = function (email) {
     this.email = email;
+    return this;
 };
 
 User.prototype.setName = function (name) {
     this.name = name;
+    return this;
 };
 
 User.prototype.setSurname = function (surname) {
     this.surname = surname;
+    return this;
 };
 
 User.prototype.setRegistrationDate = function (date) {
     this.registrationDate = date;
+    return this;
 };
 
 User.prototype.setActivated = function (activated) {
     this.activated = activated;
+    return this;
 };
 
 module.exports = User;
