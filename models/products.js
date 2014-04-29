@@ -1,4 +1,5 @@
 var schema = require('../app').schema;
+var Tank = require('./tanks');
 
 var Product = schema.define('Product', {
 	couchType: {
@@ -40,6 +41,9 @@ var Product = schema.define('Product', {
 }, {
     table: 'Products'
 });
+
+// *** Relationships ******************************************************
+Product.belongsTo(Tank, {as: 'tank', foreignKey: 'tankId'});
 
 // *** Getters ************************************************************
 Product.prototype.getName = function () {
