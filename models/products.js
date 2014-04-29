@@ -33,7 +33,10 @@ var Product = schema.define('Product', {
         default: null,
         index: true
     },
-    composition: JSON,
+    composition: {
+        type: JSON,
+        default: null
+    },
 }, {
     table: 'Products'
 });
