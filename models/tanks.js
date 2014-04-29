@@ -20,6 +20,9 @@ var Tank = schema.define('Tank', {
     table: 'tanks'
 });
 
+// *** Relationships ******************************************************
+Tank.hasMany(schema.model.Product, {as: 'products', foreignKey: 'productId'});
+
 // *** Getters ************************************************************
 Tank.prototype.getName = function () {
     return this.name;
@@ -36,7 +39,7 @@ Tank.prototype.setName = function (name) {
 };
 
 Tank.prototype.setDescription = function (description) {
-    this.updateAttribute('name', description);
+    this.updateAttribute('description', description);
     return this;
 };
 
