@@ -21,9 +21,6 @@ var Tank = schema.define('Tank', {
     table: 'tanks'
 });
 
-// *** Relationships ******************************************************
-Tank.hasMany(Product, {as: 'products', foreignKey: 'tankId'});
-
 // *** Getters ************************************************************
 Tank.prototype.getName = function () {
     return this.name;

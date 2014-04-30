@@ -43,6 +43,7 @@ var Product = schema.define('Product', {
 });
 
 // *** Relationships ******************************************************
+Tank.hasMany(Product, {as: 'products', foreignKey: 'tankId'});
 Product.belongsTo(Tank, {as: 'tank', foreignKey: 'tankId'});
 
 // *** Getters ************************************************************
