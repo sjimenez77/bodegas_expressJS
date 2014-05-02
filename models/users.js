@@ -37,7 +37,7 @@ var User = schema.define('User', {
         default: false
     }
 }, {
-    table: 'users'
+    table: 'Users'
 });
 
 // *** Getters ************************************************************

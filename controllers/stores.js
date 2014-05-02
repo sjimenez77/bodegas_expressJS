@@ -1,5 +1,5 @@
 var Schema = require('jugglingdb').Schema;
-var stocks = require('../models/stocks');
+var stores = require('../models/stores');
 
 module.exports.controller = function(app) {
 

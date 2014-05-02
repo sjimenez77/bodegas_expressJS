@@ -1,10 +1,10 @@
 var schema = require('../app').schema;
 
-var Stock = schema.define('Stock', {
+var Store = schema.define('Store', {
 	couchType: {
         type: String,
         limit: 25,
-        default: 'stock',
+        default: 'store',
         index: true
     },
     name: {
@@ -17,27 +17,27 @@ var Stock = schema.define('Stock', {
         limit: 255
     },
 }, {
-    table: 'Stocks'
+    table: 'Stores'
 });
 
 // *** Getters ************************************************************
-Stock.prototype.getName = function () {
+Store.prototype.getName = function () {
     return this.name;
 };
 
-Stock.prototype.getDescription = function () {
+Store.prototype.getDescription = function () {
     return this.description;
 };
 
 // *** Setters ************************************************************
-Stock.prototype.setName = function (name) {
+Store.prototype.setName = function (name) {
     this.updateAttribute('name', name);
     return this;
 };
 
-Stock.prototype.setDescription = function (description) {
+Store.prototype.setDescription = function (description) {
     this.updateAttribute('description', description);
     return this;
 };
 
-module.exports = Stock;
+module.exports = Store;

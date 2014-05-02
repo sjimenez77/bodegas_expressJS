@@ -54,7 +54,7 @@ var Company = schema.define('Company', {
         index: true
     },
 }, {
-    table: 'companies'
+    table: 'Companies'
 });
 
 // *** Getters ************************************************************

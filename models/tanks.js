@@ -17,7 +17,7 @@ var Tank = schema.define('Tank', {
         limit: 255
     },
 }, {
-    table: 'tanks'
+    table: 'Tanks'
 });
 
 // *** Getters ************************************************************

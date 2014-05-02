@@ -1,6 +1,6 @@
 var schema = require('../app').schema;
 var Tank = require('./tanks');
-var Stock = require('./stocks');
+var Stock = require('./stores');
 
 var Product = schema.define('Product', {
 	couchType: {
@@ -103,8 +103,8 @@ Product.prototype.setComposition = function (composition) {
 // *** Relationships ******************************************************
 if (Product.wine === null)
 {
-	Stock.hasMany(Product, {as: 'products', foreignKey: 'stockId'});
-	Product.belongsTo(Stock, {as: 'stock', foreignKey: 'stockId'});
+	Stock.hasMany(Product, {as: 'products', foreignKey: 'storeId'});
+	Product.belongsTo(Store, {as: 'store', foreignKey: 'storeId'});
 }
 else
 {
