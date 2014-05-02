@@ -1,21 +1,16 @@
 var schema = require('../app').schema;
 
-var Company = schema.define('Company', {
+var Provider = schema.define('Provider', {
 	couchType: {
         type: String,
         limit: 25,
-        default: 'company',
+        default: 'provider',
         index: true
     },
 	name: {
         type: String,
         limit: 150,
         index: true
-    },
-	companyType: {
-        type: String,
-        default: 'Bodega',
-        limit: 25,
     },
 	nif: {
         type: String,
@@ -58,95 +53,86 @@ var Company = schema.define('Company', {
 });
 
 // *** Getters ************************************************************
-Company.prototype.getName = function () {
+Provider.prototype.getName = function () {
     return this.name;
 };
 
-Company.prototype.getCompanyType = function () {
-    return this.companyType;
-};
-
-Company.prototype.getNIF = function () {
+Provider.prototype.getNIF = function () {
     return this.nif;
 };
 
-Company.prototype.getAddress = function () {
+Provider.prototype.getAddress = function () {
     return this.address;
 };
 
-Company.prototype.getPostalCode = function () {
+Provider.prototype.getPostalCode = function () {
     return this.postalCode;
 };
 
-Company.prototype.getRegion = function () {
+Provider.prototype.getRegion = function () {
     return this.region;
 };
 
-Company.prototype.getProvince = function () {
+Provider.prototype.getProvince = function () {
     return this.province;
 };
 
-Company.prototype.getCity = function () {
+Provider.prototype.getCity = function () {
     return this.city;
 };
 
-Company.prototype.getTlf = function () {
+Provider.prototype.getTlf = function () {
     return this.nif;
 };
 
-Company.prototype.getEmail = function () {
+Provider.prototype.getEmail = function () {
     return this.email;
 };
 
 // *** Setters ************************************************************
-Company.prototype.setName = function (name) {
+Provider.prototype.setName = function (name) {
     this.updateAttribute('name', name);
     return this;
 };
 
-Company.prototype.setCompanyType = function (newType) {
-    this.updateAttribute('companyType', newType);
-    return this;
-};
-
-Company.prototype.setNIF = function (nif) {
+Provider.prototype.setNIF = function (nif) {
     this.updateAttribute('nif', nif);
     return this;
 };
 
-Company.prototype.setAddress = function (address) {
+Provider.prototype.setAddress = function (address) {
     this.updateAttribute('address', address);
     return this;
 };
 
-Company.prototype.setPostalCode = function (pCode) {
+Provider.prototype.setPostalCode = function (pCode) {
     this.updateAttribute('postalCode', pCode);
     return this;
 };
 
-Company.prototype.setRegion = function (region) {
+Provider.prototype.setRegion = function (region) {
     this.updateAttribute('region', region);
     return this;
 };
 
-Company.prototype.setProvince = function (province) {
+Provider.prototype.setProvince = function (province) {
     this.updateAttribute('province', province);
     return this;
 };
 
-Company.prototype.setCity = function (city) {
+Provider.prototype.setCity = function (city) {
     this.updateAttribute('city', city);
     return this;
 };
 
-Company.prototype.setTlf = function (tlf) {
+Provider.prototype.setTlf = function (tlf) {
     this.updateAttribute('tlf', tlf);
     return this;
 };
 
-Company.prototype.setEmail = function (email) {
+Provider.prototype.setEmail = function (email) {
     this.updateAttribute('email', email);
     return this;
 };
 
-module.exports = Company;
+module.exports = Provider;

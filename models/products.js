@@ -6,7 +6,7 @@ var Product = schema.define('Product', {
 	couchType: {
 		type: String,
 		limit: 25,
-		default: 'Product',
+		default: 'product',
 		index: true
 	},
 	name: {
