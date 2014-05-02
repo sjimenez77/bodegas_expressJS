@@ -1,5 +1,6 @@
 var schema = require('../app').schema;
 
+// Tank entity (Depósito)
 var Tank = schema.define('Tank', {
 	couchType: {
         type: String,

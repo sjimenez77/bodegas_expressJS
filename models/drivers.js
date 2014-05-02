@@ -1,5 +1,6 @@
 var schema = require('../app').schema;
 
+// Driver entity (Conductor)
 var Driver = schema.define('Driver', {
 	couchType: {
         type: String,

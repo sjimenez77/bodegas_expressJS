@@ -1,5 +1,6 @@
 var schema = require('../app').schema;
 
+// Store entity (Almacén, tolva, etc.)
 var Store = schema.define('Store', {
 	couchType: {
         type: String,

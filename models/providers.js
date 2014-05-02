@@ -1,5 +1,6 @@
 var schema = require('../app').schema;
 
+// Provider entity (Proveedor)
 var Provider = schema.define('Provider', {
 	couchType: {
         type: String,
